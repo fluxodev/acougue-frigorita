@@ -1,26 +1,33 @@
-export default function Hero(){
-    return(
-        <section className="text-gray-600 min-h-screen body-font">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-  Before they sold out
-  <br className="hidden lg:inline-block" />
-  readymade gluten/
-
-
-
-      </h1>
-      <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-      <div className="flex justify-center">
-        <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+import Image from "next/image";
+import beefImage from "../assets/beef-image.png"
+export default function Hero() {
+  return (
+    <section className="bg-white text-gray-900 dark:bg-white dark:text-gray-900 min-h-screen body-font">
+      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-5xl text-4xl mb-6 font-extrabold text-red-700 leading-tight">
+            Cortes Nobres, <br className="hidden lg:inline-block" /> Sabor Incomparável
+          </h1>
+          <p className="mb-8 leading-relaxed text-lg">
+            No coração da sua mesa, carnes selecionadas com excelência. Entregamos qualidade, suculência e confiança direto do nosso açougue para sua família.
+          </p>
+          <div className="flex justify-center">
+            <a target="_blank" href="https://www.instagram.com/stories/highlights/18041767115085644/" className="inline-flex text-white font-bold bg-[#7b1113] border-0 py-3 px-8 focus:outline-none hover:bg-red-700 rounded-full text-lg transition">
+              Ver Ofertas
+            </a>
+            <a href="https://wa.me/5537998325221?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20de%20carnes%20no%20Frigorita!" className="ml-4 inline-flex text-red-800 font-extrabold bg-gray-100 border-0 py-3 px-8 focus:outline-none hover:bg-red-200 rounded-full text-lg transition">
+              Faça Seu Pedido
+            </a>
+          </div>
+        </div>
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <Image
+            className="object-cover object-center rounded-2xl shadow-lg"
+            alt="Foto de uma carne do açougue Frigorita"
+            src={beefImage}
+          />
+        </div>
       </div>
-    </div>
-    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
-    </div>
-  </div>
-</section>
-    )
+    </section>
+  );
 }
